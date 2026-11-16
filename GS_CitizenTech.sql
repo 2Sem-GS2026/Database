@@ -260,3 +260,17 @@ FROM Trecho_Calcada t
 LEFT OUTER JOIN Ocorrencia o ON o.id_trecho = t.id_trecho
 WHERE t.Possui_Rampa = 'N'
 ORDER BY t.id_trecho, o.Data_Registro;
+
+
+);
+
+-- SEQUENCES (usadas pela API para gerar os ids)
+CREATE SEQUENCE seq_usuario START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE seq_logradouro START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE seq_trecho_calcada START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE seq_tipo_ocorrencia START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE seq_ocorrencia START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE seq_confirmacao START WITH 100 INCREMENT BY 1;
+
+-- consulta as sequences
+SELECT sequence_name, last_number FROM user_sequences;
