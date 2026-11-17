@@ -262,7 +262,6 @@ WHERE t.Possui_Rampa = 'N'
 ORDER BY t.id_trecho, o.Data_Registro;
 
 
-);
 
 -- SEQUENCES (usadas pela API para gerar os ids)
 CREATE SEQUENCE seq_usuario START WITH 100 INCREMENT BY 1;
